@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.852
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lengaburu-Traffic-Problem", "Lengaburu-Traffic-Problem\Lengaburu-Traffic-Problem.csproj", "{CE728BAF-7B5A-4D52-BBE1-A506E08DA0F7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lengaburu-Traffic-Problem-Test", "Lengaburu-Traffic-Problem-Test\Lengaburu-Traffic-Problem-Test.csproj", "{37C9BBB4-930D-4132-A8C3-9FEBFBE8845D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CE728BAF-7B5A-4D52-BBE1-A506E08DA0F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CE728BAF-7B5A-4D52-BBE1-A506E08DA0F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CE728BAF-7B5A-4D52-BBE1-A506E08DA0F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CE728BAF-7B5A-4D52-BBE1-A506E08DA0F7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{37C9BBB4-930D-4132-A8C3-9FEBFBE8845D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{37C9BBB4-930D-4132-A8C3-9FEBFBE8845D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{37C9BBB4-930D-4132-A8C3-9FEBFBE8845D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{37C9BBB4-930D-4132-A8C3-9FEBFBE8845D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3F16E176-E31D-46DB-A1A2-1ECEAFDA3031}
+	EndGlobalSection
+EndGlobal
