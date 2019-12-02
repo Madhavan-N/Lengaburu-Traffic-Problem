@@ -2,10 +2,10 @@
 {
 	public class Orbit
 	{
-		public string description;
-		public double trafficSpeed;
-		public int numberOfCraters;
-		public double distance;
+		private string description;
+		private double trafficSpeed;
+		private int numberOfCraters;
+		private double distance;
 
 		public Orbit()
 		{
@@ -23,6 +23,21 @@
 		{
 			numberOfCraters += (int)(numberOfCraters * weather.weatherDamagePercantageOnCrater());
 			return numberOfCraters;
+		}
+
+		public string getDescription()
+		{
+			return description;
+		}
+
+		public double getTrafficSpeed()
+		{
+			return trafficSpeed;
+		}
+
+		public double getDistance()
+		{
+			return distance;
 		}
 	}
 }

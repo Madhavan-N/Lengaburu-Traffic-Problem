@@ -6,11 +6,11 @@ namespace Lengaburu_Traffic_Problem
 	public class Vehicle
 	{
 		const int minutes = 60;
-		public VehicleType vehicleType;
-		public double maxSpeed;
-		public double timeToCrossOneCraterinMins;
-		public int priority;
-		public WeatherType[] suitableWeatherTypes;
+		private VehicleType vehicleType;
+		private double maxSpeed;
+		private double timeToCrossOneCraterinMins;
+		private int priority;
+		private WeatherType[] suitableWeatherTypes;
 		public Vehicle()
 		{
 
@@ -25,12 +25,22 @@ namespace Lengaburu_Traffic_Problem
 		}
 		public virtual bool canTravel(Weather weather)
 		{
-			return suitableWeatherTypes.Contains(weather.weatherType);
+			return suitableWeatherTypes.Contains(weather.getWeatherType());
 		}
 		public virtual double getTravelTime(Orbit orbit, Weather weather)
 		{
-			double time = (orbit.distance / Math.Min(maxSpeed, orbit.trafficSpeed)) + ((orbit.getCratersOnOrbit(weather) * timeToCrossOneCraterinMins) / minutes);
+			double time = (orbit.getDistance() / Math.Min(maxSpeed, orbit.getTrafficSpeed())) + ((orbit.getCratersOnOrbit(weather) * timeToCrossOneCraterinMins) / minutes);
 			return time;
+		}
+
+		public virtual int getPriority()
+		{
+			return priority;
+		}
+
+		public virtual VehicleType getVehicleType()
+		{
+			return vehicleType;
 		}
 
 		public override string ToString()

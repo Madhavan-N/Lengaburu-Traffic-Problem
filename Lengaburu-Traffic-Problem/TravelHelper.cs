@@ -5,9 +5,9 @@ namespace Lengaburu_Traffic_Problem
 {
 	public class TravelHelper
 	{
-		public Orbit[] orbits { get; set; }
-		public Vehicle[] vehicles { get; set; }
-		public WeatherType weatherType { get; set; }
+		private Orbit[] orbits { get; set; }
+		private Vehicle[] vehicles { get; set; }
+		private WeatherType weatherType { get; set; }
 
 		public TravelHelper()
 		{
@@ -60,7 +60,7 @@ namespace Lengaburu_Traffic_Problem
 			else if (newTripTravelTime == shortestTripTravelTime)
 			{
 				var trips = new Trip[] { newTrip, shortestTrip };
-				shortestTrip = trips.OrderBy(t => t.vehicle.priority).FirstOrDefault();
+				shortestTrip = trips.OrderBy(t => t.getVehicle().getPriority()).FirstOrDefault();
 			}
 			return shortestTrip;
 		}

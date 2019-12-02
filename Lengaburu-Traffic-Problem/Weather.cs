@@ -8,7 +8,7 @@ namespace Lengaburu_Traffic_Problem
 		private IDictionary<WeatherType, double> weatherDamagePercentage = new Dictionary<WeatherType, double>();
 
 		private double damage;
-		public WeatherType weatherType;
+		private WeatherType weatherType;
 		public Weather()
 		{
 
@@ -25,6 +25,11 @@ namespace Lengaburu_Traffic_Problem
 		public virtual double weatherDamagePercantageOnCrater()
 		{
 			return damage / percentage;
+		}
+
+		public WeatherType getWeatherType()
+		{
+			return this.weatherType;
 		}
 	}
 }

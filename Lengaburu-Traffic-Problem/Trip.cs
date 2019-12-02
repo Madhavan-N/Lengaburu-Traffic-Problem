@@ -2,9 +2,9 @@
 {
 	public class Trip
 	{
-		public Orbit orbit;
-		public Vehicle vehicle;
-		public Weather weather;
+		private Orbit orbit;
+		private Vehicle vehicle;
+		private Weather weather;
 		public Trip(Orbit _orbit, Vehicle _vehicle, Weather _weather)
 		{
 			orbit = _orbit;
@@ -19,7 +19,12 @@
 
 		public override string ToString()
 		{
-			return string.Format("Vehicle {0} on {1}", vehicle.ToString(), orbit.description);
+			return string.Format("Vehicle {0} on {1}", vehicle.ToString(), this.orbit.getDescription());
+		}
+
+		public Vehicle getVehicle()
+		{
+			return vehicle;
 		}
 	}
 }

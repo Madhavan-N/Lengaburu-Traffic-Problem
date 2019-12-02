@@ -11,7 +11,8 @@ namespace Lengaburu_Traffic_Problem_Test
 		[TestMethod]
 		public void shouldUpdateNumberOfCraterDependingOnWeather()
 		{
-			Orbit orbit = new Orbit() { numberOfCraters = 10 };
+			var numberOfCraters = 10;
+			Orbit orbit = new Orbit("Orbit1", 10, numberOfCraters, 20);
 			var increasePercentage = 0.10;
 			var expectedValue = 11;
 			Mock<Weather> weather = new Mock<Weather>(MockBehavior.Strict);
@@ -23,7 +24,8 @@ namespace Lengaburu_Traffic_Problem_Test
 		[TestMethod]
 		public void shouldIncreaseNumberOfCraterWithPositiveDamageValue()
 		{
-			Orbit orbit = new Orbit() { numberOfCraters = 20 };
+			var numberOfCraters = 20;
+			Orbit orbit = new Orbit("Orbit1", 10, numberOfCraters, 20);
 			var percentage = 0.10;
 			var expectedValue = 22;
 			Mock<Weather> weather = new Mock<Weather>(MockBehavior.Strict);
@@ -35,7 +37,8 @@ namespace Lengaburu_Traffic_Problem_Test
 		[TestMethod]
 		public void shouldDecreaseNumberOfCraterDependingOnWeatherNegativeDamageValue()
 		{
-			Orbit orbit = new Orbit() { numberOfCraters = 10 };
+			var numberOfCraters = 10;
+			Orbit orbit = new Orbit("Orbit1", 10, numberOfCraters, 20);
 			var percentage = -0.10;
 			var expectedValue = 9;
 			Mock<Weather> weather = new Mock<Weather>(MockBehavior.Strict);
@@ -46,7 +49,8 @@ namespace Lengaburu_Traffic_Problem_Test
 		[TestMethod]
 		public void shouldNotUpdateNumberOfCraterIfWeatherHasZeroDamage()
 		{
-			Orbit orbit = new Orbit() { numberOfCraters = 10 };
+			var numberOfCraters = 10;
+			Orbit orbit = new Orbit("Orbit1", 10, numberOfCraters, 20);
 			var percentage = 0;
 			var expectedValue = 10;
 			Mock<Weather> weather = new Mock<Weather>(MockBehavior.Strict);
